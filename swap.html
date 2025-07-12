@@ -21,5 +21,18 @@
 
     <button type="submit">Send Request</button>
   </form>
+  <script>
+  document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Stop page from refreshing
+
+    // Capture the values
+    const sender = document.getElementById('yourName').value;
+    const receiver = document.getElementById('targetName').value;
+    const skillOffered = document.getElementById('yourSkill').value;
+    const skillWanted = document.getElementById('wantedSkill').value;
+
+    alert(`Swap request sent from ${sender} to ${receiver}!\nOffering: ${skillOffered} → Wanting: ${skillWanted}`);
+  });
+</script>
 </body>
 </html>
